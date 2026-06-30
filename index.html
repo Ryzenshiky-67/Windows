@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Windows 10 IoT LTSC - Custom Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="lockscreen">
+        <div class="lockscreen-content">
+            <h1 id="lockTime">00:00</h1>
+            <p id="lockDate">Selasa, 30 Juni 2026</p>
+        </div>
+    </div>
+
+    <div id="desktop" class="hidden">
+        <div class="desktop-icons" id="desktopIcons">
+            <div class="desktop-icon" ondblclick="openApp('terminal')">
+                <div class="icon-img terminal">⚡</div>
+                <span>Terminal</span>
+            </div>
+            <div class="desktop-icon" ondblclick="openApp('settings')">
+                <div class="icon-img settings-icon">⚙️</div>
+                <span>Settings</span>
+            </div>
+        </div>
+
+        <div id="windowContainer"></div>
+
+        <div id="taskbar">
+            <div class="start-btn" id="startBtn" onclick="toggleStart()">⊞</div>
+            <div class="taskbar-running" id="taskbarRunning"></div>
+            <div class="tray-time" id="trayTime">
+                <span id="trayTimeStr">00:00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
